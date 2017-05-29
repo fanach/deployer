@@ -11,8 +11,8 @@ import (
 	"github.com/fanach/deployer/server/service"
 )
 
-// PostTest serves POST /test
-func PostTest(w http.ResponseWriter, req *http.Request) {
+// PostTestConn serves POST /testconn
+func PostTestConn(w http.ResponseWriter, req *http.Request) {
 	var reqDeploy = &entity.ReqDeploy{}
 	data, err := ioutil.ReadAll(req.Body)
 	if err != nil {

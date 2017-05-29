@@ -14,7 +14,7 @@ func Start() {
 
 	ir.Get("/", iris.ToHandler(api.GetRoot))
 	ir.Post("/deploy", iris.ToHandler(api.PostDeploy))
-	ir.Post("/test", iris.ToHandler(api.PostTest))
+	ir.Post("/testconn", iris.ToHandler(api.PostTestConn))
 
 	ir.Listen(":8080")
 }

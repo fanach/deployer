@@ -27,11 +27,11 @@
 				$('#div_key').hide();
 			}
 		});
-		// POST /test
-		$("#btn_test").on("click", function() {
+		// POST /testconn
+		$("#btn_testconn").on("click", function() {
 			var dataObject = getFormAsJson()
 			$.ajax({
-				url: baseUrl + "/test",
+				url: baseUrl + "/testconn",
 				type: 'POST',
 				data: JSON.stringify(dataObject),
 				contentType: "application/json",
@@ -117,18 +117,18 @@
 	<div class="container">
 		<legend>Fanach Deployer</legend>
 		<div>
-			<p>This panel helps you deploying shadowsocks server with a single click.</p>
+			<p>This panel helps you deploying shadowsocks server automatically.</p>
 			<p>It will do the following:</p>
 			<ol>
-				<li>Connect to server</li>
-				<li>Install docker on server</li>
-				<li>Start a shadowsocks server container</li>
+				<li>Connect to server(SSH);</li>
+				<li>Install docker on server;</li>
+				<li>Start a shadowsocks server container.</li>
 			</ol>
 		</div>
 		<legend>Configurations</legend>
 		<div>
 			<label for="box_host">Host</label>
-			<input type="text" class="form-control" id="box_host" placeholder="IP address or domain name">
+			<input type="text" class="form-control" id="box_host" placeholder="Public IP address or domain name">
 		</div>
 		<div>
 			<label for="box_port">Port</label>
@@ -157,7 +157,7 @@
                               We'll never save nor share your key with anyone else.
             </small>
 		</div>
-		<button id="btn_test" class="btn">Test</button>
+		<button id="btn_testconn" class="btn">Test Connection</button>
 		<button id="btn_deploy" class="btn btn-primary">Deploy</button>
 	</div>
 </body>
